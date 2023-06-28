@@ -16,7 +16,7 @@ const Encoder: FunctionComponent = () => (
       disabled={!IS_BROWSER}
     >
     </textarea>
-    <code className="whitespace-pre-wrap break-words bg-gray-800 text-white p-4 rounded-md">
+    <code className="whitespace-pre-wrap break-words bg-gray-800 text-white p-4 rounded-md overflow-auto max-h-60">
       {encodedText}
     </code>
   </div>

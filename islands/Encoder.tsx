@@ -1,10 +1,10 @@
-import { computed, Signal } from "@preact/signals";
+import { computed, signal } from "@preact/signals";
 import { FunctionComponent } from "preact";
 import { encode } from "@/signals/tokenizer.ts";
 import { formatArray } from "@/utils/client/formatter.ts";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 
-const text = new Signal("");
+const text = signal("");
 const encodedText = computed(() => formatArray(encode(text.value)));
 
 const Encoder: FunctionComponent = () => (
